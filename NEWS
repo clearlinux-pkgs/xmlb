@@ -1,0 +1,136 @@
+Version 0.1.10
+~~~~~~~~~~~~~~
+Released: 2019-05-16
+
+Bugfixes:
+ - Do not mistake gzipped files as being application/x-zerosize content type (Richard Hughes)
+ - Fix running the installed tests with no checkout directory (Richard Hughes)
+
+Version 0.1.9
+~~~~~~~~~~~~~
+Released: 2019-05-07
+
+Bugfixes:
+ - Correctly implement building a silo with _SINGLE_LANG set (Richard Hughes)
+
+Version 0.1.8
+~~~~~~~~~~~~~
+Released: 2019-03-26
+
+New Features:
+ - Add some installed tests (Richard Hughes)
+
+Bugfixes:
+ - Always add all children when importing parent-less XML data (Richard Hughes)
+
+Version 0.1.7
+~~~~~~~~~~~~~
+Released: 2019-03-08
+
+New Features:
+ - Add XB_BUILDER_COMPILE_FLAG_IGNORE_GUID (Richard Hughes)
+ - Allow nesting XbBuilderSource content type handlers (Richard Hughes)
+
+Bugfixes:
+ - Correct return type for xb_builder_compile() (Mario Limonciello)
+ - Increase the amount of time for the inotify event to happen (Richard Hughes)
+ - Only run the speed tests when using '-m perf' (Richard Hughes)
+
+Version 0.1.6
+~~~~~~~~~~~~~
+Released: 2018-12-30
+
+New Features:
+ - Allow controlling how the XbQuery is parsed (Richard Hughes)
+
+Version 0.1.5
+~~~~~~~~~~~~~
+Released: 2018-11-21
+
+New Features:
+ - Add xb_builder_node_export() (Richard Hughes)
+
+Bugfixes:
+ - Do not start a GIO session bus when using xb-tool (Richard Hughes)
+ - Ignore calls to xb_silo_query_build_index() with no results (Richard Hughes)
+ - Lazy load the stemmer when required (Richard Hughes)
+
+Version 0.1.4
+~~~~~~~~~~~~~
+Released: 2018-11-08
+
+New Features:
+ - Add support for bound variables (Richard Hughes)
+ - Add support for indexed strings (Richard Hughes)
+ - Optionally optimize predicates (Richard Hughes)
+ - Split out the XPath query logic into XbQuery (Richard Hughes)
+ - Support XPath method to do a Porter stem operation on text (Richard Hughes)
+
+Bugfixes:
+ - Don't hardcode the path of python3 (Ting-Wei Lan)
+ - Only attempt to pass TEXT opcodes for upper-case() (Richard Hughes)
+ - Revert the optional text space saving feature (Richard Hughes)
+ - Use INTE:INTE for comparison where available (Richard Hughes)
+
+Version 0.1.3
+~~~~~~~~~~~~~
+Released: 2018-10-22
+
+New Features:
+ - Add XbBuilderFixup (Richard Hughes)
+ - Add xb_builder_node_get_attr_as_uint() (Richard Hughes)
+ - Add xb_builder_node_get_text_as_uint() (Richard Hughes)
+ - Add xb_builder_node_sort_children() (Richard Hughes)
+
+Bugfixes:
+ - Allow being used as a meson subproject (Jan Tojnar)
+ - Fix compiling on Ubuntu Xenial (Richard Hughes)
+ - Switch from GPtrArray to XbStack for performance reasons (Richard Hughes)
+ - Update meson relro checks (Jan Tojnar)
+
+Version 0.1.2
+~~~~~~~~~~~~~
+Released: 2018-10-16
+
+New Features:
+ - Add support for XPath string-length() (Richard Hughes)
+ - Add xb_builder_source_load_bytes() (Richard Hughes)
+ - Add xb_silo_export_file() (Richard Hughes)
+ - Add xb_string_append_union() (Richard Hughes)
+ - Add xb_string_escape() (Richard Hughes)
+
+Bugfixes:
+ - Allow the use as meson subproject (Jan Tojnar)
+ - Do not query with the first child (Richard Hughes)
+ - Fix a crash when using xb_builder_node_set_text() in a fixup (Richard Hughes)
+ - Only run the XbBuilderSourceConverterFunc if the silo needs rebuilding (Richard Hughes)
+ - Return an error when the XPath predicate has invalid syntax (Richard Hughes)
+
+Version 0.1.1
+~~~~~~~~~~~~~
+Released: 2018-10-11
+
+New Features:
+ - Add support for XPath starts-with() and ends-with() (Richard Hughes)
+ - Add support for number() and text() type conversion (Richard Hughes)
+ - Add support for predicate not() (Richard Hughes)
+ - Add xb_silo_invalidate() (Richard Hughes)
+ - Export XbMachine and XbOpcode (Richard Hughes)
+
+Bugfixes:
+ - Add the XbBuilderSource info keys to the generated GUID (Richard Hughes)
+ - Add the XbBuilderSourceNodeFunc ID to the generated GUID (Richard Hughes)
+ - Add the source prefix to the generated GUID (Richard Hughes)
+ - Do not use GNode when compiling the blob (Richard Hughes)
+ - Ignore invalid arguments if OR queries have other sections to parse (Richard Hughes)
+ - Load back the saved new silo to get a mmapped version (Richard Hughes)
+ - Support XPath wildcard nodes with predicates (Richard Hughes)
+ - Support some relative parent queries (Richard Hughes)
+ - Use the time::changed-usec if set in the GUID (Richard Hughes)
+
+Version 0.1.0
+~~~~~~~~~~~~~
+Released: 2018-10-05
+
+Notes:
+ - A library for querying compressed XML metadata.
