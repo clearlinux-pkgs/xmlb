@@ -1,5 +1,6 @@
-0.1.11
+0.1.13
 docbook-xml
 glib-dev
 gtk-doc
 pkgconfig(gio-2.0)
+util-linux
