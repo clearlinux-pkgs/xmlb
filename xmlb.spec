@@ -4,7 +4,7 @@
 #
 Name     : xmlb
 Version  : 0.1.15
-Release  : 5
+Release  : 6
 URL      : https://github.com/hughsie/libxmlb/archive/0.1.15/libxmlb-0.1.15.tar.gz
 Source0  : https://github.com/hughsie/libxmlb/archive/0.1.15/libxmlb-0.1.15.tar.gz
 Summary  : No detailed summary available
@@ -86,6 +86,15 @@ Group: Default
 license components for the xmlb package.
 
 
+%package tests
+Summary: tests components for the xmlb package.
+Group: Default
+Requires: xmlb = %{version}-%{release}
+
+%description tests
+tests components for the xmlb package.
+
+
 %prep
 %setup -q -n libxmlb-0.1.15
 cd %{_builddir}/libxmlb-0.1.15
@@ -95,7 +104,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1586070433
+export SOURCE_DATE_EPOCH=1587045519
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -123,8 +132,6 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %defattr(-,root,root,-)
 /usr/lib64/girepository-1.0/Xmlb-1.0.typelib
 /usr/share/gir-1.0/*.gir
-/usr/share/installed-tests/libxmlb/libxmlb.test
-/usr/share/installed-tests/libxmlb/test.xml.gz.gz.gz
 
 %files dev
 %defattr(-,root,root,-)
@@ -188,9 +195,14 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files libexec
 %defattr(-,root,root,-)
-/usr/libexec/installed-tests/libxmlb/xb-self-test
 /usr/libexec/xb-tool
 
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/xmlb/b386b371ce94933e63ced1052aa72a60da5485ff
+
+%files tests
+%defattr(-,root,root,-)
+/usr/libexec/installed-tests/libxmlb/xb-self-test
+/usr/share/installed-tests/libxmlb/libxmlb.test
+/usr/share/installed-tests/libxmlb/test.xml.gz.gz.gz
