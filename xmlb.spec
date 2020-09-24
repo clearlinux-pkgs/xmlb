@@ -4,7 +4,7 @@
 #
 Name     : xmlb
 Version  : 0.1.15
-Release  : 6
+Release  : 7
 URL      : https://github.com/hughsie/libxmlb/archive/0.1.15/libxmlb-0.1.15.tar.gz
 Source0  : https://github.com/hughsie/libxmlb/archive/0.1.15/libxmlb-0.1.15.tar.gz
 Summary  : No detailed summary available
