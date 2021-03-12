@@ -1,6 +1,65 @@
+Version 0.3.0
+~~~~~~~~~~~~~
+Released: 2021-03-12
+
+New Features:
+ - Add a new object to contain query context data (Philip Withnall)
+ - Allow collapsing empty XML tags if no children or text (Aleksander Morgado)
+ - Allow marking elements as tokenized from xb-tool (Richard Hughes)
+ - Allow optimized searching when comparing tokens (Richard Hughes)
+ - Support mmap()ing the source file to get bytes (Philip Withnall)
+ - Support query caching with xb_silo_lookup_query() (Philip Withnall)
+ - Support UTF-8 for upper-case() and lower-case() (Richard Hughes)
+ - Use g_str_match_string() for non-ASCII search queries (Richard Hughes)
+ - Write search tokens into the built silo (Richard Hughes)
+
+Bugfixes:
+ - Cancel the GFileMonitor before unreffing it (Iain Lane)
+ - Do not allocate a 128Mb buffer for each xb_builder_source_ctx_get_bytes() (Richard Hughes)
+ - Do not error when creating a query if the element doesn’t exist (Philip Withnall)
+ - Fix a parse failure for a double comment (Richard Hughes)
+ - Fix various errors or missing annotations in docs (Philip Withnall)
+ - Make handling of single-result queries more robust (Philip Withnall)
+
+Version 0.2.1
+~~~~~~~~~~~~~
+Released: 2020-09-07
+
+Bugfixes:
+ - Do not assume g_content_type_guess() always returns valid results (Richard Hughes)
+ - Make the build reproducible (Richard Hughes)
+ - Revert "Do not show a critical warning for invalid XML" (Richard Hughes)
+ - Update the header location to reflect the new API (Richard Hughes)
+
+Version 0.2.0
+~~~~~~~~~~~~~
+Released: 2020-08-18
+
+Important:
+ - This release breaks API and ABI and bumps the version of libxmlb.so and so
+   packages that depend on this library (e.g. fwupd or gnome-software) will need
+   to be rebuilt at the same time.
+
+New Features:
+ - Add the missing TEXT:INTE XPath support (Richard Hughes)
+ - Add variant of xb_silo_query_with_root() avoiding XbNode creation (Philip Withnall)
+ - Add XB_BUILDER_SOURCE_FLAG_WATCH_DIRECTORY flag (Philip Withnall)
+ - Allow specifying the node cache behaviour for the query (Richard Hughes)
+
+Bugfixes:
+ - Avoid recursion when setting flags if possible (Philip Withnall)
+ - Avoid using weak pointers when building the silo (Philip Withnall)
+ - Change the default value for the node cache (Richard Hughes)
+ - Do not allocate opcodes individually (Philip Withnall)
+ - Do not show a critical warning for invalid XML (Richard Hughes)
+ - Do not unconditionally create GTimer objects (Philip Withnall)
+ - Do not use the node cache when building indexes (Richard Hughes)
+ - Lazy load more arrays to reduce RSS usage (Philip Withnall)
+ - Report silo versions when versions mismatch (Robert Ancell)
+
 Version 0.1.15
 ~~~~~~~~~~~~~~
-Released: 2020-xx-xx
+Released: 2020-03-04
 
 New Features:
  - Add xb_builder_source_add_simple_adapter (Daniel Campello)
