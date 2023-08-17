@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : xmlb
-Version  : 0.3.12
-Release  : 18
-URL      : https://github.com/hughsie/libxmlb/archive/0.3.12/libxmlb-0.3.12.tar.gz
-Source0  : https://github.com/hughsie/libxmlb/archive/0.3.12/libxmlb-0.3.12.tar.gz
+Version  : 0.3.13
+Release  : 19
+URL      : https://github.com/hughsie/libxmlb/archive/0.3.13/libxmlb-0.3.13.tar.gz
+Source0  : https://github.com/hughsie/libxmlb/archive/0.3.13/libxmlb-0.3.13.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -114,10 +114,10 @@ tests components for the xmlb package.
 
 
 %prep
-%setup -q -n libxmlb-0.3.12
-cd %{_builddir}/libxmlb-0.3.12
+%setup -q -n libxmlb-0.3.13
+cd %{_builddir}/libxmlb-0.3.13
 pushd ..
-cp -a libxmlb-0.3.12 buildavx2
+cp -a libxmlb-0.3.13 buildavx2
 popd
 
 %build
@@ -125,7 +125,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1692052623
+export SOURCE_DATE_EPOCH=1692316454
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
