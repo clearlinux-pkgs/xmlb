@@ -1,6 +1,4 @@
-0.3.15
+0.3.16
 docbook-xml
 gtk-doc
-pkgconfig(liblzma)
 pkgconfig(libzstd)
-xz-dev
