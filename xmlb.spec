@@ -6,10 +6,10 @@
 # autospec commit: f56f1fa
 #
 Name     : xmlb
-Version  : 0.3.16
-Release  : 22
-URL      : https://github.com/hughsie/libxmlb/archive/0.3.16/libxmlb-0.3.16.tar.gz
-Source0  : https://github.com/hughsie/libxmlb/archive/0.3.16/libxmlb-0.3.16.tar.gz
+Version  : 0.3.17
+Release  : 23
+URL      : https://github.com/hughsie/libxmlb/archive/0.3.17/libxmlb-0.3.17.tar.gz
+Source0  : https://github.com/hughsie/libxmlb/archive/0.3.17/libxmlb-0.3.17.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -31,12 +31,8 @@ BuildRequires : pkgconfig(libzstd)
 %description
 libxmlb
 =======
-Introduction
-------------
-XML is slow to parse and strings inside the document cannot be memory mapped as
-they do not have a trailing NUL char. The libxmlb library takes XML source, and
-converts it to a structured binary representation with a deduplicated string
-table -- where the strings have the NULs included.
+[![Coverity Scan Build Status](https://scan.coverity.com/projects/17055/badge.svg)](https://scan.coverity.com/projects/17055)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/hughsie/libxmlb/badge)](https://securityscorecards.dev/viewer/?uri=github.com/hughsie/libxmlb)
 
 %package bin
 Summary: bin components for the xmlb package.
@@ -114,10 +110,10 @@ tests components for the xmlb package.
 
 
 %prep
-%setup -q -n libxmlb-0.3.16
-cd %{_builddir}/libxmlb-0.3.16
+%setup -q -n libxmlb-0.3.17
+cd %{_builddir}/libxmlb-0.3.17
 pushd ..
-cp -a libxmlb-0.3.16 buildavx2
+cp -a libxmlb-0.3.17 buildavx2
 popd
 
 %build
@@ -125,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1712156585
+export SOURCE_DATE_EPOCH=1712324627
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -268,6 +264,6 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/libexec/installed-tests/libxmlb/test.xml
 /usr/libexec/installed-tests/libxmlb/test.xml.gz.gz.gz
 /usr/libexec/installed-tests/libxmlb/test.xml.xz
-/usr/libexec/installed-tests/libxmlb/test.xml.zstd
+/usr/libexec/installed-tests/libxmlb/test.xml.zst
 /usr/libexec/installed-tests/libxmlb/xb-self-test
 /usr/share/installed-tests/libxmlb/libxmlb.test
