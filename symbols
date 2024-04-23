@@ -13,6 +13,7 @@ libxmlb.so.2:LIBXMLB_0.1.7
 libxmlb.so.2:LIBXMLB_0.2.0
 libxmlb.so.2:LIBXMLB_0.3.0
 libxmlb.so.2:LIBXMLB_0.3.1
+libxmlb.so.2:LIBXMLB_0.3.19
 libxmlb.so.2:LIBXMLB_0.3.4
 libxmlb.so.2:xb_builder_add_fixup
 libxmlb.so.2:xb_builder_add_locale
@@ -205,3 +206,4 @@ libxmlb.so.2:xb_value_bindings_get_type
 libxmlb.so.2:xb_value_bindings_init
 libxmlb.so.2:xb_value_bindings_is_bound
 libxmlb.so.2:xb_value_bindings_lookup_opcode
+libxmlb.so.2:xb_version_string
