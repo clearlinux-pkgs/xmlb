@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : xmlb
-Version  : 0.3.20
-Release  : 26
-URL      : https://github.com/hughsie/libxmlb/archive/0.3.20/libxmlb-0.3.20.tar.gz
-Source0  : https://github.com/hughsie/libxmlb/archive/0.3.20/libxmlb-0.3.20.tar.gz
+Version  : 0.3.21
+Release  : 27
+URL      : https://github.com/hughsie/libxmlb/archive/0.3.21/libxmlb-0.3.21.tar.gz
+Source0  : https://github.com/hughsie/libxmlb/archive/0.3.21/libxmlb-0.3.21.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -110,10 +110,10 @@ tests components for the xmlb package.
 
 
 %prep
-%setup -q -n libxmlb-0.3.20
-cd %{_builddir}/libxmlb-0.3.20
+%setup -q -n libxmlb-0.3.21
+cd %{_builddir}/libxmlb-0.3.21
 pushd ..
-cp -a libxmlb-0.3.20 buildavx2
+cp -a libxmlb-0.3.21 buildavx2
 popd
 
 %build
@@ -121,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1728930398
+export SOURCE_DATE_EPOCH=1728999994
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
